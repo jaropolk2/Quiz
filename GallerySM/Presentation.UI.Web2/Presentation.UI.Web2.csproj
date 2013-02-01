@@ -43,9 +43,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\packages\AutoMapper.2.2.0\lib\net40\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -65,9 +75,6 @@
     <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.4.5.6\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="System.Net.Http">
     </Reference>
@@ -121,6 +128,25 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Assets\common\foundation\css\foundation.min.css" />
+    <Content Include="Assets\common\foundation\js\foundation.min.js" />
+    <Content Include="Assets\common\foundation\js\jquery.foundation.accordion.js" />
+    <Content Include="Assets\common\foundation\js\jquery.foundation.alerts.js" />
+    <Content Include="Assets\common\foundation\js\jquery.foundation.buttons.js" />
+    <Content Include="Assets\common\foundation\js\jquery.foundation.clearing.js" />
+    <Content Include="Assets\common\foundation\js\jquery.foundation.forms.js" />
+    <Content Include="Assets\common\foundation\js\jquery.foundation.joyride.js" />
+    <Content Include="Assets\common\foundation\js\jquery.foundation.magellan.js" />
+    <Content Include="Assets\common\foundation\js\jquery.foundation.mediaQueryToggle.js" />
+    <Content Include="Assets\common\foundation\js\jquery.foundation.navigation.js" />
+    <Content Include="Assets\common\foundation\js\jquery.foundation.orbit.js" />
+    <Content Include="Assets\common\foundation\js\jquery.foundation.reveal.js" />
+    <Content Include="Assets\common\foundation\js\jquery.foundation.tabs.js" />
+    <Content Include="Assets\common\foundation\js\jquery.foundation.tooltips.js" />
+    <Content Include="Assets\common\foundation\js\jquery.foundation.topbar.js" />
+    <Content Include="Assets\common\foundation\js\jquery.js" />
+    <Content Include="Assets\common\foundation\js\jquery.placeholder.js" />
+    <Content Include="Assets\common\foundation\js\modernizr.foundation.js" />
     <Content Include="Global.asax" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -166,6 +192,9 @@
   <ItemGroup>
     <Content Include="Views\Perguntas\QuizSendoConfigurado.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\_LayoutPage.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -180,9 +209,9 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerPort>50308</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
           <IISUrl>http://localhost:16873/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>

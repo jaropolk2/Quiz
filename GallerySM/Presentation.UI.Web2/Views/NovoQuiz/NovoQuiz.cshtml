@@ -2,33 +2,31 @@
 
 @{
     ViewBag.Title = "NovoQuiz";
+    Layout = "~/Views/_LayoutPage.cshtml";
 }
 
 <h2>Novo Quiz</h2>
-@using (Html.BeginForm("Novo", "NovoQuiz", FormMethod.Post))
+@using (Html.BeginForm("Novo", "NovoQuiz", FormMethod.Post, new { @class = "custom" }))
 {
-    <div>
-        <div>
-            <label>Selecione o <strong>assunto</strong>:</label><br />
-            @Html.DropDownListFor(p => p.CategoriaId, new SelectList(((IList<GallerySM.Aplicacao.Models.Dominio.ContextosDelimitados.Games.Quiz.AssuntoModel>)ViewBag.AssuntosDisponiveis), "AssuntoId", "Name"), "--Selecione--")
-        </div>
-        <br />
-        <label>Uma breve <strong>descrição</strong>:</label><br />
-        <div>@Html.TextBoxFor(m => m.Descricao)</div>
-        <br />
-        <input type="submit" value="Novo" />
-        <fieldset>
-            <legend>Quiz existentes</legend>
-            <ul>
-                @foreach (var quiz in ((IList<GallerySM.Aplicacao.Models.Dominio.ContextosDelimitados.Games.Quiz.QuizModel>)ViewBag.QuizzesDisponiveis))
-                {   
-                    <li>@Html.ActionLink(quiz.Descricao, "NovasPerguntas", "Perguntas", quiz, null)</li>    
+<div class="row">
+    <label>Selecione o <strong>assunto</strong>:</label><br />
+    @Html.DropDownListFor(p => p.CategoriaId, new SelectList(((IList<GallerySM.Aplicacao.Models.Dominio.ContextosDelimitados.Games.Quiz.AssuntoModel>)ViewBag.AssuntosDisponiveis), "AssuntoId", "Name"), "--Selecione--")
+</div>
+<br />
+<label>Uma breve <strong>descrição</strong>:</label><br />
+<div>
+    @Html.TextBoxFor(m => m.Descricao)
+</div>
+<br />
+    <button class="button">Novo</button>
+<fieldset>
+    <legend>Quiz existentes</legend>
+    <ul>
+@foreach (var quiz in ((IList<GallerySM.Aplicacao.Models.Dominio.ContextosDelimitados.Games.Quiz.QuizModel>)ViewBag.QuizzesDisponiveis))
+{   
+        <li>@Html.ActionLink(quiz.Descricao, "NovasPerguntas", "Perguntas", quiz, null)</li>    
                             
-                }
-            </ul>
-        </fieldset>
-
-
-    </div>
-
+}
+    </ul>
+</fieldset>
 }
