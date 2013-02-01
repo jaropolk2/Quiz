@@ -28,13 +28,13 @@ namespace GallerySM.Domain.Games.Quiz.Setup
                 ISpecification possuiCincoRespostas = 
                     new PerguntaDevePossuirCincoRespostas(pergunta, pergunta.PossiveisRespostas.ToList());
 
-                if (possuiCincoRespostas.IsSatisfiedBy())
+                if (!possuiCincoRespostas.IsSatisfiedBy())
                     throw new PerguntaDeveTerCincoRespostasException();
 
                 ISpecification possuiUmaRespostaCorreta =
                     new PerguntaPossuiUmaRespostaCorretaSpecification(pergunta.PossiveisRespostas.ToList());
 
-                if (possuiUmaRespostaCorreta.IsSatisfiedBy())
+                if (!possuiUmaRespostaCorreta.IsSatisfiedBy())
                     throw new PerguntaNaoPossuiUmaRespostaCorretaException();
             }
             
