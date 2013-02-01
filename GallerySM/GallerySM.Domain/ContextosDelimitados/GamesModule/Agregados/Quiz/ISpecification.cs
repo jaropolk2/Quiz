@@ -16,7 +16,18 @@ namespace GallerySM.Domain.Games.Quiz.Specifications
 
     public class PerguntaNaoPossuiUmaRespostaCorretaException : Exception
     {
+        public PerguntaNaoPossuiUmaRespostaCorretaException()            
+        { }
         public PerguntaNaoPossuiUmaRespostaCorretaException(string mensagem)
+            : base(mensagem)
+        { }
+    }
+
+    public class PerguntaDeveTerCincoRespostasException : Exception
+    {
+        public PerguntaDeveTerCincoRespostasException()            
+        { }
+        public PerguntaDeveTerCincoRespostasException(string mensagem)
             : base(mensagem)
         { }
     }
