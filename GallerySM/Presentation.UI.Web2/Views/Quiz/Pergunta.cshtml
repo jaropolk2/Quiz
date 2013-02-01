@@ -1,0 +1,20 @@
+﻿@model GallerySM.Aplicacao.Models.Dominio.ContextosDelimitados.Games.Quiz.PerguntaModel
+
+@{
+    ViewBag.Title = "Pergunta";
+}
+
+<h2>Pergunta</h2>
+<h3>@Model.Descricao</h3>
+
+@using (Html.BeginForm("Responde","Quiz",FormMethod.Post))
+{
+    <ul>
+        @foreach (var resposta in Model.PossiveisRespostas)
+        {   
+            <li>@Html.RadioButton("resposta", resposta.RespostaId)<span>@resposta.Descricao</span></li>
+        }
+    </ul>
+    <input type="submit" value="Pergunta" />
+}
+

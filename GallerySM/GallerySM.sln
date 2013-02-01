@@ -1,0 +1,112 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GallerySM.Domain", "GallerySM.Domain\GallerySM.Domain.csproj", "{47201D13-C640-4384-94CD-00D210CB6637}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GallerySM.Domain.Tests", "GallerySM.Domain.Tests\GallerySM.Domain.Tests.csproj", "{5806475B-4489-4CD7-BE43-F0842D3DBDAA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4. Domínio", "4. Domínio", "{DD4AA1D4-B4D9-4D72-8BDF-094F266EF218}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5. Infraestrutura", "5. Infraestrutura", "{824FAD01-7A2E-409C-98B7-4E6602FFE30D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Aplicação", "3. Aplicação", "{479DCBD0-066C-42D6-88AD-F83BD1530B19}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Serviços", "2. Serviços", "{1DA71596-43C6-441B-9722-0767E0F41868}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1. Apresentação", "1. Apresentação", "{A1C88D38-828F-4ED0-AA53-8E29B638E881}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GallerySM.Infraestrutura", "GallerySM.Infraestrutura\GallerySM.Infraestrutura.csproj", "{D423A807-D3D4-4749-8062-7754EB0E2827}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GallerySM.Aplicacao", "GallerySM.Aplicacao\GallerySM.Aplicacao.csproj", "{B14BE582-E13D-4DAF-B22C-0AE6D42B3DB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{F98EF0C3-FF69-4BAC-ABAD-58CA5C66D268}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GallerySM.Aplicacao.Tests", "GallerySM.Aplicacao.Tests\GallerySM.Aplicacao.Tests.csproj", "{EC4BB54C-4EE5-43A4-B5DC-82A880118FAF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GallerySM.Aplicacao.Models", "GallerySM.Aplicacao.Models\GallerySM.Aplicacao.Models.csproj", "{B7A513CC-5006-4CB6-BC34-45A3D83A69FF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation.UI.Web2", "Presentation.UI.Web2\Presentation.UI.Web2.csproj", "{397393F2-C58E-4696-B1E9-3F29F34884C2}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tecnoprax.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = GallerySM.Aplicacao\\GallerySM.Aplicacao.csproj
+		SccProjectTopLevelParentUniqueName1 = GallerySM.sln
+		SccProjectName1 = GallerySM.Aplicacao
+		SccLocalPath1 = GallerySM.Aplicacao
+		SccProjectUniqueName2 = GallerySM.Domain.Tests\\GallerySM.Domain.Tests.csproj
+		SccProjectTopLevelParentUniqueName2 = GallerySM.sln
+		SccProjectName2 = GallerySM.Domain.Tests
+		SccLocalPath2 = GallerySM.Domain.Tests
+		SccProjectUniqueName3 = GallerySM.Domain\\GallerySM.Domain.csproj
+		SccProjectTopLevelParentUniqueName3 = GallerySM.sln
+		SccProjectName3 = GallerySM.Domain
+		SccLocalPath3 = GallerySM.Domain
+		SccProjectUniqueName4 = GallerySM.Infraestrutura\\GallerySM.Infraestrutura.csproj
+		SccProjectTopLevelParentUniqueName4 = GallerySM.sln
+		SccProjectName4 = GallerySM.Infraestrutura
+		SccLocalPath4 = GallerySM.Infraestrutura
+		SccProjectUniqueName5 = GallerySM.Aplicacao.Tests\\GallerySM.Aplicacao.Tests.csproj
+		SccProjectTopLevelParentUniqueName5 = GallerySM.sln
+		SccProjectName5 = GallerySM.Aplicacao.Tests
+		SccLocalPath5 = GallerySM.Aplicacao.Tests
+		SccProjectUniqueName6 = GallerySM.Aplicacao.Models\\GallerySM.Aplicacao.Models.csproj
+		SccProjectTopLevelParentUniqueName6 = GallerySM.sln
+		SccProjectName6 = GallerySM.Aplicacao.Models
+		SccLocalPath6 = GallerySM.Aplicacao.Models
+		SccProjectUniqueName7 = Presentation.UI.Web2\\Presentation.UI.Web2.csproj
+		SccProjectTopLevelParentUniqueName7 = GallerySM.sln
+		SccProjectName7 = Presentation.UI.Web2
+		SccLocalPath7 = Presentation.UI.Web2
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{47201D13-C640-4384-94CD-00D210CB6637}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47201D13-C640-4384-94CD-00D210CB6637}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47201D13-C640-4384-94CD-00D210CB6637}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47201D13-C640-4384-94CD-00D210CB6637}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5806475B-4489-4CD7-BE43-F0842D3DBDAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5806475B-4489-4CD7-BE43-F0842D3DBDAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5806475B-4489-4CD7-BE43-F0842D3DBDAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5806475B-4489-4CD7-BE43-F0842D3DBDAA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D423A807-D3D4-4749-8062-7754EB0E2827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D423A807-D3D4-4749-8062-7754EB0E2827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D423A807-D3D4-4749-8062-7754EB0E2827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D423A807-D3D4-4749-8062-7754EB0E2827}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B14BE582-E13D-4DAF-B22C-0AE6D42B3DB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B14BE582-E13D-4DAF-B22C-0AE6D42B3DB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B14BE582-E13D-4DAF-B22C-0AE6D42B3DB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B14BE582-E13D-4DAF-B22C-0AE6D42B3DB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EC4BB54C-4EE5-43A4-B5DC-82A880118FAF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4BB54C-4EE5-43A4-B5DC-82A880118FAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4BB54C-4EE5-43A4-B5DC-82A880118FAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4BB54C-4EE5-43A4-B5DC-82A880118FAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7A513CC-5006-4CB6-BC34-45A3D83A69FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7A513CC-5006-4CB6-BC34-45A3D83A69FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7A513CC-5006-4CB6-BC34-45A3D83A69FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7A513CC-5006-4CB6-BC34-45A3D83A69FF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{397393F2-C58E-4696-B1E9-3F29F34884C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{397393F2-C58E-4696-B1E9-3F29F34884C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{397393F2-C58E-4696-B1E9-3F29F34884C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{397393F2-C58E-4696-B1E9-3F29F34884C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5806475B-4489-4CD7-BE43-F0842D3DBDAA} = {DD4AA1D4-B4D9-4D72-8BDF-094F266EF218}
+		{47201D13-C640-4384-94CD-00D210CB6637} = {DD4AA1D4-B4D9-4D72-8BDF-094F266EF218}
+		{D423A807-D3D4-4749-8062-7754EB0E2827} = {824FAD01-7A2E-409C-98B7-4E6602FFE30D}
+		{B14BE582-E13D-4DAF-B22C-0AE6D42B3DB8} = {479DCBD0-066C-42D6-88AD-F83BD1530B19}
+		{EC4BB54C-4EE5-43A4-B5DC-82A880118FAF} = {479DCBD0-066C-42D6-88AD-F83BD1530B19}
+		{B7A513CC-5006-4CB6-BC34-45A3D83A69FF} = {479DCBD0-066C-42D6-88AD-F83BD1530B19}
+		{F98EF0C3-FF69-4BAC-ABAD-58CA5C66D268} = {A1C88D38-828F-4ED0-AA53-8E29B638E881}
+		{397393F2-C58E-4696-B1E9-3F29F34884C2} = {F98EF0C3-FF69-4BAC-ABAD-58CA5C66D268}
+	EndGlobalSection
+EndGlobal

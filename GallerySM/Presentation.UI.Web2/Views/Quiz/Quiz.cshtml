@@ -1,0 +1,13 @@
+﻿@model IList<GallerySM.Aplicacao.Models.Dominio.ContextosDelimitados.Games.Quiz.AssuntoModel>
+
+@{
+    ViewBag.Title = "Quiz";
+}
+
+<h2>Quiz</h2>
+<ul>
+    @foreach (var assunto in Model.Distinct()) 
+    {
+        <li>@Html.ActionLink(assunto.Name,"NovoQuiz/" + assunto.AssuntoId)</li>
+    }
+</ul>

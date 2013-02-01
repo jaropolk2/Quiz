@@ -1,0 +1,15 @@
+﻿@model GallerySM.Aplicacao.Models.Dominio.ContextosDelimitados.Games.Quiz.AssuntoModel
+
+@{
+    ViewBag.Title = "Assuntos";
+}
+
+<h2>Adicionar novos assunto:</h2>
+@using (Html.BeginForm("Nova","Assunto", FormMethod.Post))
+{   
+   @Html.DropDownList("asdasdadad",new SelectList(((IList<GallerySM.Aplicacao.Models.Dominio.ContextosDelimitados.Games.Quiz.AssuntoModel>)ViewBag.AssuntosDisponiveis),"AssuntoId","Name"),"--Selecione--")
+   <br />
+       @Html.TextBoxFor(t => t.Name)
+     <input type="submit" value="Nova" />
+}
+

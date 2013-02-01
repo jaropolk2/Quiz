@@ -1,0 +1,24 @@
+﻿@model GallerySM.Aplicacao.Models.Dominio.ContextosDelimitados.Games.Quiz.PerguntaModel
+
+@{
+    ViewBag.Title = "Quiz | Abstração Coletiva";    
+}
+
+<h1>Quiz</h1>
+<div id="pergunta">
+    <div id="enunciado">
+        <h2>@Model.Descricao</h2>
+    </div>
+    <div id="respostas">
+        @foreach (var r in Model.PossiveisRespostas)
+        { 
+            <div class="resposta">
+               @Html.ActionLink(r.Descricao, "Responde/", new  {Model.QuizId, r.PerguntaId, r.RespostaId });
+            </div>
+        }
+    </div>
+
+    @*<div class="pager">
+        @Html.PageLinks(Model.PagingInfo, x => Url.Action("List", new { page = x }))
+    </div>*@
+</div>

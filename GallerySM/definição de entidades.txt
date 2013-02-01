@@ -1,0 +1,54 @@
+ENTIDADES:
+
+Efige 
+
+Obra
+- tem nome
+- tem artista
+- tem data de criação
+- breve descrição 
+- 
+Artista
+- cria obra
+- cria exposição
+- divulga exposição
+- divulga nova obra
+- tem efige
+
+Galeria
+- monta exposições
+- negocia obras
+- tem efige
+
+Exposicao
+- possui um conjunto de obras
+- possui um conjunto de textos
+- arrecada efige
+
+Colecionador
+- coleciona obras
+- monta acervo pessoal
+- transforma parte do acervo pessoal em exposição
+- tem efige
+
+GaleriaPublica
+- exibe exposições com obras do mercado público
+- à medidas que novas obras chegam na GaleriaPublica, os usuários do sistema
+recebem notificações
+- tem efige
+
+Acervo
+
+3358-9000
+francisco leitao 486
+marcia / porteiro jeová
+996352510
+
+============
+INTERFACES
+
+IExhibitionable - podem ser expostas
+INegotiable - podem ser negociáveis
+IMarketable - podem ser vendidas
+ILeasable - podem ser alugadas
+ICollectible - podem ser colecionadas

@@ -1,0 +1,51 @@
+﻿@model GallerySM.Aplicacao.Models.Dominio.ContextosDelimitados.Games.Quiz.QuizModel
+
+@{
+    ViewBag.Title = "QuizSendoConfigurado";
+}
+<h2>@Model.Descricao</h2>
+
+@using (Html.BeginForm("AdicionaNova", "Perguntas", FormMethod.Post))
+{
+    <div id="nova">
+        <fieldset>
+            <legend>Pergunta</legend>
+            Enunciado: @Html.TextBox("descricaoPergunta")
+            Dificuldade:@Html.DropDownList("dificuldade", new SelectList(new string[] { "Basica", "Avançada" }, "Basica"))
+            <br />
+        </fieldset>
+        <fieldset>
+            <legend>Respostas</legend>
+            @Html.TextBox("resposta1")@Html.CheckBox("checkResposta1")<br />
+            @Html.TextBox("resposta2")@Html.CheckBox("checkResposta2")<br />
+            @Html.TextBox("resposta3")@Html.CheckBox("checkResposta3")<br />
+            @Html.TextBox("resposta4")@Html.CheckBox("checkResposta4")<br />
+            @Html.TextBox("resposta5")@Html.CheckBox("checkResposta5")<br />
+            <input type="submit" value="Nova" />
+            @if (ViewBag.Pronto)
+            { 
+                @Html.ActionLink("Salva Quiz!", "SalvaQuiz");
+            }
+        </fieldset>        
+    </div>
+}
+
+<div id="perguntas">
+    @foreach (var p in Model.Perguntas)
+    { 
+        <p>@p.Descricao</p>
+        <ul>
+            @foreach (var r in p.PossiveisRespostas)
+            {
+                if (r.Correta)
+                {
+                    <li><em>@r.Descricao</em></li>   
+                }                
+                else
+                {
+                    <li>@r.Descricao</li>   
+                }
+            }            
+        </ul>
+    }
+</div>
