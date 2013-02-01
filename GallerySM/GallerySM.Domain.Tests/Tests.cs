@@ -86,57 +86,57 @@ namespace GallerySM.Domain.Tests
             }
         }
 
-        [TestMethod]
-        public void PodeCriarUmQuizSemPerguntas()
-        {
-            using (var contexto = new EFUnitOfWork(new GallerySMContext()))
-            {
-                var repositorio = new QuizRepositorio(contexto);               
+        //[TestMethod]
+        //public void PodeCriarUmQuizSemPerguntas()
+        //{
+        //    using (var contexto = new EFUnitOfWork(new GallerySMContext()))
+        //    {
+        //        var repositorio = new QuizRepositorio(contexto);               
 
-                IQuizSetup serviceSetup = new QuizSetup(repositorio);
+        //        IQuizSetup serviceSetup = new QuizSetup(repositorio);
 
-                Assunto categoria = repositorio.ListaCategoriasExistentes().Where(c => c.AssuntoId == 1).FirstOrDefault();
+        //        Assunto categoria = repositorio.ListaCategoriasExistentes().Where(c => c.AssuntoId == 1).FirstOrDefault();
 
-                Quiz quiz = QuizFactory.CriaQuiz(categoria, "Primeiro quiz", DateTime.Now.AddDays(15), true);
-
-
-                try
-                {
-                    serviceSetup.Salva(quiz);                    
-                }
-                catch (Exception ex)
-                {
-                    throw ((DbEntityValidationException)ex);
-                }
-
-            }
-        }
-
-        [TestMethod]
-        public void PodeCriarUmQuizSemCategoria()
-        {
-            using (var contexto = new EFUnitOfWork(new GallerySMContext()))
-            {
-                var repositorio = new QuizRepositorio(contexto);
-
-                IQuizSetup serviceSetup = new QuizSetup(repositorio);
-
-                Assunto categoria = null;//repositorio.ListaCategoriasExistentes().Where(c => c.CategoriaId == 1).FirstOrDefault();
-
-                Quiz quiz = QuizFactory.CriaQuiz(categoria, "Primeiro quiz", DateTime.Now.AddDays(15), true);
+        //        Quiz quiz = QuizFactory.CriaQuiz(categoria, "Primeiro quiz", DateTime.Now.AddDays(15), true);
 
 
-                try
-                {
-                    serviceSetup.Salva(quiz);
-                }
-                catch (Exception ex)
-                {
-                    throw ((DbEntityValidationException)ex);
-                }
+        //        try
+        //        {
+        //            serviceSetup.Salva(quiz);                    
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            throw ((DbEntityValidationException)ex);
+        //        }
 
-            }
-        }
+        //    }
+        //}
+
+        //[TestMethod]
+        //public void PodeCriarUmQuizSemCategoria()
+        //{
+        //    using (var contexto = new EFUnitOfWork(new GallerySMContext()))
+        //    {
+        //        var repositorio = new QuizRepositorio(contexto);
+
+        //        IQuizSetup serviceSetup = new QuizSetup(repositorio);
+
+        //        Assunto categoria = null;//repositorio.ListaCategoriasExistentes().Where(c => c.CategoriaId == 1).FirstOrDefault();
+
+        //        Quiz quiz = QuizFactory.CriaQuiz(categoria, "Primeiro quiz", DateTime.Now.AddDays(15), true);
+
+
+        //        try
+        //        {
+        //            serviceSetup.Salva(quiz);
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            throw ((DbEntityValidationException)ex);
+        //        }
+
+        //    }
+        //}
 
         [TestMethod]
         public void PodeCriarUmQuizComPerguntas()
@@ -177,38 +177,39 @@ namespace GallerySM.Domain.Tests
         }
    
 
-        [TestMethod]
-        public void UsuarioPodeResponderUmQuizInteiro()
-        {
-            using (var contexto = new EFUnitOfWork(new GallerySMContext()))
-            {
-                Usuario usuarioLocalizado = new UsuarioRepositorio(contexto).BuscarUsuario(1);
+        //[TestMethod]
+        //public void UsuarioPodeResponderUmQuizInteiro()
+        //{
+        //    using (var contexto = new EFUnitOfWork(new GallerySMContext()))
+        //    {
+        //        Usuario usuarioLocalizado = new UsuarioRepositorio(contexto).BuscarUsuario(1);
 
-                IRepositorioQuiz repositorio = new QuizRepositorio(contexto);
-                IQuizService serviceQuiz = new QuizService(repositorio);
+        //        IRepositorioQuiz repositorio = new QuizRepositorio(contexto);
+        //        IQuizService serviceQuiz = new QuizService(repositorio);
 
-                var quiz = serviceQuiz.RecuperaQuiz(3);
-                Assert.IsTrue(quiz.Perguntas.Count == 10, "O Quiz não possui 10 perguntas.");
-                foreach (var p in quiz.Perguntas)
-                {
-                    Assert.IsTrue(p.PossiveisRespostas.Count == 5, string.Format("A Pergunta {0} não possui 5 respostas.",p.PerguntaId));
-                    var respostaQualquer = p.PossiveisRespostas.FirstOrDefault(r => r.Correta);
-                    quiz.Responder(usuarioLocalizado, p, respostaQualquer);
-                }
+        //        var quiz = serviceQuiz.RecuperaQuiz(3);
+        //        Assert.IsTrue(quiz.Perguntas.Count == 10, "O Quiz não possui 10 perguntas.");
+        //        foreach (var p in quiz.Perguntas)
+        //        {
+        //            Assert.IsTrue(p.PossiveisRespostas.Count == 5, string.Format("A Pergunta {0} não possui 5 respostas.",p.PerguntaId));
+        //            var respostaQualquer = p.PossiveisRespostas.FirstOrDefault(r => r.Correta);
+        //            quiz.Responder(usuarioLocalizado, p, respostaQualquer);
+        //        }
 
-                contexto.Save();
-            }
-        }
-        [TestMethod]
-        public void PodeBuscarOsAssuntosDeQuizzesDisponiveis()
-        {
-            using (var contexto = new EFUnitOfWork(new GallerySMContext()))
-            {
-                var repositorioQuiz = new QuizRepositorio(contexto);
-                var assuntos = repositorioQuiz.AssuntosDeQuizzesDisponiveisPara(1);
-                Assert.IsNotNull(assuntos);
-                Assert.IsTrue(assuntos.Count > 0);
-            }
-        }
+        //        contexto.Save();
+        //    }
+        //}
+
+        //[TestMethod]
+        //public void PodeBuscarOsAssuntosDeQuizzesDisponiveis()
+        //{
+        //    using (var contexto = new EFUnitOfWork(new GallerySMContext()))
+        //    {
+        //        var repositorioQuiz = new QuizRepositorio(contexto);
+        //        var assuntos = repositorioQuiz.AssuntosDeQuizzesDisponiveisPara(1);
+        //        Assert.IsNotNull(assuntos);
+        //        Assert.IsTrue(assuntos.Count > 0);
+        //    }
+        //}
     }
 }
