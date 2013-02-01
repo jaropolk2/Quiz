@@ -45,6 +45,7 @@ namespace GallerySM.Aplicacao.Games
                         pergunta.AdicionarResposta(respostaModel.Descricao, respostaModel.Correta);
                     }
                 }
+                serviceSetup.Salva(quiz);
             }
         }
 

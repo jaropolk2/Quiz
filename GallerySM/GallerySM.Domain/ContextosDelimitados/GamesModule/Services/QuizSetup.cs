@@ -23,6 +23,21 @@ namespace GallerySM.Domain.Games.Quiz.Setup
 
         public void Salva(Quiz quiz)
         {
+            foreach(var pergunta in quiz.Perguntas)
+            {
+                ISpecification possuiCincoRespostas = 
+                    new PerguntaDevePossuirCincoRespostas(pergunta, pergunta.PossiveisRespostas.ToList());
+
+                if (!possuiCincoRespostas.IsSatisfiedBy())
+                    throw new PerguntaDeveTerCincoRespostasException();
+
+                ISpecification possuiUmaRespostaCorreta =
+                    new PerguntaPossuiUmaRespostaCorretaSpecification(pergunta.PossiveisRespostas.ToList());
+
+                if (!possuiUmaRespostaCorreta.IsSatisfiedBy())
+                    throw new PerguntaNaoPossuiUmaRespostaCorretaException();
+            }
+            
             _repositorio.Salva(quiz);
         }
         
